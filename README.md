@@ -73,8 +73,3 @@ You already decided this correctly earlier — simulate drift by hand, live, in 
 
 Run through 3-4 cycles: normal → normal → drifting → drifting-more, and read out the Shed ESP's risk score climbing from NORMAL → WATCH → HIGH RISK on Serial Monitor, live. That's a genuinely convincing demo of the actual mechanism, with real sensors reacting to real physical changes you're making by hand.
 
-## What to say honestly if a judge asks
-
-- *"Is that the DHT11 as skin temperature?"* — "Yes, it's a placeholder for the contact probe (MAX30205) specified in our architecture, which we haven't sourced yet. The pipeline is temperature-agnostic — swapping the sensor doesn't change any code downstream."
-- *"Where's the pH sensor?"* — "Not installed yet. The firmware handles its absence explicitly — it falls back to the cow's own rolling baseline pH rather than feeding the model a fake number, so the demo stays honest about what's real versus placeholder."
-- *"What are the red/black sensors for?"* — "Bonus exploration — the sound sensor is a rough acoustic proxy for rumination, which is a real technique in precision livestock research. The heartbeat sensor is fingertip-designed for humans, so we're not claiming it's validated for cattle — it's logged for future exploration only."
